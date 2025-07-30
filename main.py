@@ -4,7 +4,7 @@ import pandas as pd
 import re
 import json
 
-import google.generativeai as genai  # ✅ Using Gemini instead of Ollama
+import google.generativeai as genai  # ✅ Using Gemini instead of Ollama 
 from langchain_community.document_loaders import DataFrameLoader
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
@@ -15,7 +15,7 @@ from tools import tools_for_llm, available_functions_map
 # === CONFIGURE GEMINI ===
 genai.configure(api_key="AIzaSyBDKS7IegBhInbUQcx0VsmUGuUoZrClbxs")  # Replace or load safely
 
-llm = genai.GenerativeModel('gemini-1.5-flash')  # Or 'gemini-1.5-flash'
+llm = genai.GenerativeModel('gemini-1.5-pro')  # Or 'gemini-1.5-flash'
 
 # === RAG SETUP ===
 persist_directory = "chroma_db"
